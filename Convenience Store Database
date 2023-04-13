@@ -1,0 +1,32 @@
+--Created a convenience store database
+
+CREATE TABLE Items (id integer primary key, Name text, category text, quantity numeric, price numeric);
+
+INSERT INTO Items VALUES
+(1, "Hershey Bar", "Candy", 10, 1.49),
+(2, "Reeses King Size", "Candy", 12, 1.99),
+(3, "Lay's Regular Potato Chips", "Chips", 14, 3.49),
+(4, "Lay's BBQ Chips", "Chips", 12, 3.79),
+(5, "Lay's Sour Cream & Onion", "Chips", 12, 3.59),
+(6, "Pepsi 20Oz", "Soda", 30, 1.89),
+(7, "Coca-Cola 20Oz", "Soda", 40, 2.09),
+(8, "Sprite 20Oz", "Soda", 15, 2.09),
+(9, "Yeungling 6PK", "Alcohol", 8, 7.99),
+(10, "Natural Light 6PK", "Alcohol", 12, 4.99),
+(11, "Barefoot-Reisling 15ml", "Alcohol", 15, 14.99),
+(12, "Pizza-Pepperoni (Slice)", "OTC Food", 5, 2.99),
+(13, "Pizza-Cheese (Slice)", "OTC Food", 10, 2.69),
+(14, "Donuts 1PK", "OTC Food", 35, 1.89),
+(15, "Hot Dog-Individual", "OTC Food", 15, 0.99),
+(16, "Fountain-Dr. Pepper", "Other Drinks", 100, 1.19),
+(17, "Fountain-Mellow Yellow", "Other Drinks", 100, 1.19),
+(18, "Coffee-Med", "Other Drinks", 50, 1.79);
+
+--display the database sorted by price low to high
+SELECT * FROM Items
+ORDER BY price;
+
+--show total in stock of all products
+SELECT SUM(quantity) FROM items;
+
+
